@@ -28,7 +28,7 @@ public class TVService {
                     .findFirst()
                     .ifPresent(deferredResult::setResult);
                     if(!deferredResult.hasResult()) {
-                        deferredResult.setErrorResult(new NotFoundException(String.format("The program  bla bla bla ")));
+                        deferredResult.setErrorResult(new NotFoundException(String.format("The program %s was not found")));
                     }
         });
         return deferredResult;
