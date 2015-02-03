@@ -19,7 +19,7 @@ public class TVResource {
 
     @RequestMapping("/{channel}")
     public DeferredResult<List<ScheduleDTO>> getSchedule(@PathVariable String channel) {
-        return tvService.getScheduledPrograms(channel);
+        return tvService.getScheduledProgramsHystrix(channel);
     }
 
     /**
